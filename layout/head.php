@@ -1,5 +1,13 @@
 <html>
+<?php
+  include('C:/xampp/htdocs/dbcon.php');
+	include('C:/xampp/htdocs/session.php');
+  $result=mysqli_query($livetracking, "select * from users where user_id='$session_id'")or die('Error In Session');
+  $row=mysqli_fetch_array($result);
 
+ $unn=$row['username'];
+  
+  ?>
 <head>
   <meta charset="UTF-8">
   <title>Measurement| Dashboard</title>
